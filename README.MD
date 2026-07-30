@@ -372,6 +372,12 @@ root@044c52af26fc:/# cat /data/volume.txt
 hi voloume
 root@044c52af26fc:/# exit
 exit
+$ docker stop untest2
+untest2
+$ docker rm untest2
+untest2
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 $ docker run -v E1:/data -it --name untest3 un1
 root@f86dbda80a3c:/# cat /data/volume.txt 
 hi voloume
