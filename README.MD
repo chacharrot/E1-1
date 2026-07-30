@@ -39,10 +39,10 @@
 ### 3-1. 폴더 구성
 
 ```bash
-$ pwd
+$ pwd #절대경로 확인.
 /Users/djmd33128278/Desktop/E1-1
 
-$ ls -la
+$ ls -la  #리스트 확인. -l long format 확인 -a 모든파일 확인.
 drwxr-xr-x  4 djmd33128278  djmd33128278   128  7 29 15:39 .
 drwx------+ 6 djmd33128278  djmd33128278   192  7 29 13:18 ..
 -rw-r--r--  1 djmd33128278  djmd33128278  4035  7 29 13:42 README.MD
@@ -115,7 +115,7 @@ $ ls -l hello.txt
 <!-- 변경 후 --> -rwxr-xr-x  1 djmd33128278  djmd33128278  12  7 29 15:56 hello
 ```
 
-> 💡 배운 점: <!-- 예: 755와 644의 차이 한 줄 정리 -->
+> 💡 배운 점: r 읽기 4 w 쓰기 2 x 실행 1 권한. 처음부터 소유자, 그룹, 기타사용자 순. 
 
 ---
 
@@ -159,7 +159,7 @@ a0bff801c991   hello-world   "/hello"   22 minutes ago       Exited (0) 22 minut
 ### 5-1. 폴더 구조
 
 ```
-my-web/
+nginxdoc/
 ├── Dockerfile
 └── site/
     └── index.html
@@ -167,8 +167,12 @@ my-web/
 
 ### 5-2. Dockerfile (각 줄 설명 포함)
 
-```dockerfile
-<!-- 작성한 Dockerfile 전체 + 주석으로 각 줄 목적 설명 -->
+```
+FROM nginx:alpine ##nginx alpine 버전 다운로드 및 사용 
+
+COPY ./site/ /usr/share/nginx/html/ ## dockerfile 상대경로 /site/ 에 있는 파일 컨테이너 절대경로로 복사.
+
+EXPOSE 80    ##명시적으로 80번 port를 쓸꺼라 해뒀지만 안써도 무관.
 ```
 
 ### 5-3. 빌드 로그
