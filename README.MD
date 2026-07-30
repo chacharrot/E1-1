@@ -15,7 +15,6 @@
 | Git | git version 2.53.0
 | 기타 | orbStack 사용.
 
-> ⚠️ 재현 시 주의사항: <!-- 개인 PC 종속 경로/설정이 있다면 대체 방법 기록 -->
 
 ---
 
@@ -30,7 +29,7 @@
 - [v] 바인드 마운트 변경 반영 확인
 - [v] 볼륨 영속성 검증 (컨테이너 삭제 전/후)
 - [v] Git 설정 + VSCode GitHub 연동
-- [ ] 트러블슈팅 2건 이상 기록
+- [v] 트러블슈팅 2건 이상 기록
 
 ---
 
@@ -52,7 +51,7 @@ drwxr-xr-x  4 djmd33128278  djmd33128278   128  7 29 15:39 .
 drwx------+ 6 djmd33128278  djmd33128278   192  7 29 13:18 ..
 drwxr-xr-x  2 djmd33128278  djmd33128278    64  7 29 15:39 practice
 -rw-r--r--  1 djmd33128278  djmd33128278  4035  7 29 13:42 README.MD
-
+```
 ### 3-2. 파일 생성/복사/이동/삭제
 
 ```bash
@@ -398,10 +397,6 @@ remote.E1.url=https://github.com/chacharrot/E1-1.git
 remote.E1.fetch=+refs/heads/*:refs/remotes/E1/*
 ```
 
-📸 VSCode GitHub 연동 증거:
-
-![vscode 연동](./images/vscode-github.png)
-
 ---
 
 ## 10) 트러블슈팅 (2건 이상)
@@ -414,7 +409,7 @@ remote.E1.fetch=+refs/heads/*:refs/remotes/E1/*
 | 확인 | -d 옵션을 통해 백그라운드로 실행만 가능.
 | 해결 | docker run -d 옵션으로 실행하면 터미널 하나로 작업 가능.
 
-### 사례 2: <!-- 제목 -->
+### 사례 2: dockerfile 실행 비정상
 
 | 구분 | 내용 |
 |---|---|
